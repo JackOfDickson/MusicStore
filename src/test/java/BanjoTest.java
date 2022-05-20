@@ -44,4 +44,9 @@ public class BanjoTest {
         assertEquals(1, banjo.calculateMarkupPercentage(), 0.0);
     }
 
+    @Test
+    public void canPlay(){
+        assertEquals("plong", banjo.play());
+    }
+
 }
