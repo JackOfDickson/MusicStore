@@ -1,26 +1,21 @@
-package shop.instruments;
+package shop.musicAccessories;
 
 import interfaces.ISell;
 
-public abstract class Instrument implements ISell {
-    private String model;
-    private InstrumentType instrumentType;
+public class MusicAccessory implements ISell {
+
+    private String description;
     private double buyingPrice;
     private double sellingPrice;
 
-    public Instrument(String model, InstrumentType instrumentType, double buyingPrice, double sellingPrice) {
-        this.model = model;
-        this.instrumentType = instrumentType;
+    public MusicAccessory(String description, double buyingPrice, double sellingPrice) {
+        this.description = description;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public InstrumentType getInstrumentType() {
-        return instrumentType;
+    public String getDescription() {
+        return description;
     }
 
     public double getBuyingPrice() {
@@ -38,4 +33,5 @@ public abstract class Instrument implements ISell {
     public double calculateMarkupPercentage(){
         return (sellingPrice-buyingPrice)/buyingPrice;
     } // 1 = 100%
+
 }
