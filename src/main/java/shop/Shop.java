@@ -41,4 +41,14 @@ public class Shop {
         }
     }
 
+    public double potentialProfit(){
+        double runningTotal = 0;
+
+        for (ISell key: shopStock.keySet()){
+            runningTotal += key.calculateMarkupAbsolute()* shopStock.get(key);
+        }
+
+        return runningTotal;
+    }
+
 }

@@ -40,4 +40,10 @@ public class ShopTest {
         assertEquals(4, shop.getShopStock().get(banjo));
     }
 
+    @Test
+    public void canCalculatePotentialProfit(){
+        shop.buyStock(banjo, 5);
+        assertEquals(500, shop.potentialProfit(), 0.0);
+    }
+
 }
