@@ -33,6 +33,12 @@ public class Shop {
         }
     }
 
-//    public
+    public void sellStock(ISell item){
+        till += item.getSellingPrice();
+        shopStock.put(item, shopStock.get(item)-1);
+        if (shopStock.get(item) == 0){
+            shopStock.remove(item);
+        }
+    }
 
 }

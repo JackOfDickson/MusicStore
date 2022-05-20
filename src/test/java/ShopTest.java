@@ -25,4 +25,19 @@ public class ShopTest {
         assertEquals(500, shop.getTill(), 0.0);
     }
 
+    @Test
+    public void doesNotAddStockWhenInsufficientMoney(){
+        shop.buyStock(banjo, 100);
+        assertEquals(1000, shop.getTill(), 0.0);
+        assertEquals(null, shop.getShopStock().get(banjo));
+    }
+
+    @Test
+    public void canSellStock(){
+        shop.buyStock(banjo, 5);
+        shop.sellStock(banjo);
+        assertEquals(700, shop.getTill(), 0.0);
+        assertEquals(4, shop.getShopStock().get(banjo));
+    }
+
 }
