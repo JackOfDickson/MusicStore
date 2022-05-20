@@ -31,11 +31,11 @@ public abstract class Instrument implements ISell {
         return sellingPrice;
     }
 
-    public double calculateMarkupAbsolute(double buyingPrice, double sellingPrice){
+    public double calculateMarkupAbsolute(){
         return sellingPrice - buyingPrice;
     }
 
-    public double calculateMarkupPercentage(double buyingPrice, double sellingPrice){
+    public double calculateMarkupPercentage(){
         return (sellingPrice-buyingPrice)/buyingPrice;
     }
 }

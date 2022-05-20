@@ -34,4 +34,14 @@ public class BanjoTest {
         assertEquals(100, banjo.getBuyingPrice(), 0.0);
     }
 
+    @Test
+    public void canReturnMarkupAbsolute(){
+        assertEquals(100, banjo.calculateMarkupAbsolute(), 0.0);
+    }
+
+    @Test
+    public void canReturnMarkupPercentage(){
+        assertEquals(1, banjo.calculateMarkupPercentage(), 0.0);
+    }
+
 }
